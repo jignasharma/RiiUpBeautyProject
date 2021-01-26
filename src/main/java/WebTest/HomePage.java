@@ -18,4 +18,8 @@ public class HomePage extends Util {
     {
         driver.findElements(By.linkText(link));
     }
+    public void userClickOnAboutUsButton()
+    {
+        driver.findElement(By.linkText("About Us")).click();
+    }
 }

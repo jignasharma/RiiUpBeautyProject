@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 
 public class MyStepdefs {
     HomePage homePage = new HomePage();
+    AboutUs  aboutUs  = new AboutUs();
     @Given("user open browser")
     public void userOpenBrowser() {
     }
@@ -34,5 +35,17 @@ public class MyStepdefs {
     public void userShouldBeAbleToNavigate(String link)
     {
         homePage.userShouldBeAbleToNavigate(link);
+    }
+
+    @When("user click About Us button")
+    public void userClickAboutUsButton()
+    {
+        homePage.userClickOnAboutUsButton();
+    }
+
+    @Then("user open About Us page successfully")
+    public void userOpenAboutUsPageSuccessfully() {
+        aboutUs.verifyToUserIsOnAboutUsPage();
+        aboutUs.verifyAboutUsText();
     }
 }
