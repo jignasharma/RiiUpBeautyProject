@@ -20,6 +20,11 @@ Feature: Open browser
              | Returns    | /pages/returns         |
              | Contact Us | /pages/contact-us      |
 
+@Test1
+ Scenario: user open browser successfully
+  Given    user is on homepage
+  When     user click About Us button
+  Then     user open About Us page successfully
 
 
 
